@@ -23,78 +23,75 @@ float area2;
 float pib2;
 int Turismo2;
 
-// Entrada de dados da Carta A
+// Entrada e Saida da Carta 1
 
 printf("cadastre a primeira carta:\n");
 
-printf("Digite o estado1:\n");
+printf("Digite o estado:");
 scanf("%s", estado1);
+printf("O estado digitado foi: %s\n\n", estado1);
 
-printf("Digite o CodigoA1:\n");
+printf("Digite o Codigo da carta:");
 scanf("%s", CodigoA1);
+printf("O CodigoA1 digitado foi: %s\n\n", CodigoA1);
 
-printf("Digite o Cidade1:\n");
-scanf("%s", Cidade1);
+printf("Digite a Cidade:");
+scanf(" %[^\n]", Cidade1); //Lê a linha inteira, incluindo espaços
+printf("A cidade digitada foi: %s\n\n", Cidade1);
 
-printf("Digite o População1:\n");
+printf("Digite o População:");
 scanf("%d", &População1);
+printf("A população digitada foi: %d\n\n", População1);
 
-printf("Digite o area1:\n");
+printf("Digite o área (Km²): ");
 scanf("%f", &area1);
+printf("A área digitada foi: %.2f\n\n", area1);
 
-printf("Digite o pib1:\n");
+printf("Digite o pib:\n");
 scanf("%f", &pib1);
+printf("O PIB digitado foi: %.2f\n\n", pib1);
 
-printf("Digite o Turismo1:\n");
+
+printf("Digite o número de pontos turísticos:");
 scanf("%d", &Turismo1);
+printf("O número de pontos turísticos digitado foi: %d\n\n", Turismo1);
 
-printf("estado1:, %s\n", estado1);
-printf("CodigoA1:, %s\n", CodigoA1);
-printf("Cidade1:, %s\n", Cidade1);
-printf("População1:, %d\n", População1);
-printf("area1:, %.2f\n", area1);
-printf("pib1:, %.2f\n", pib1);
-printf("Turismo1:, %d\n", Turismo1);
+// Entrada e saida da Carta 2
+printf("cadastro da segunda carta:\n");
 
-// Entrada de dados da Carta 
+printf("Digite o estado:");
+scanf("%s", &estado2); //adiciona um espaço antes do %s para consumir o caractere de nova linha
+printf("O estado digitado foi: %s\n\n", estado2);
 
-printf("cadastre a segunda carta:\n");
-
-printf("Digite o estado2:\n");
-scanf("%s", estado2);
-
-printf("Digite o CodigoB2:\n");
+printf("Digite o Codigo da carta:");
 scanf("%s", CodigoB2);
+printf("O CodigoB2 digitado foi: %s\n\n", CodigoB2);
 
-printf("Digite o Cidade2:\n");
-scanf("%s", Cidade2);
+printf("Digite o nome da Cidade:");
+scanf(" %[^\n]", Cidade2); //Lê a linha inteira, incluindo espaços
+printf("A cidade digitada foi: %s\n\n", Cidade2);
 
-printf("Digite o População2:\n");
+printf("Digite o População:");
 scanf("%d", &População2);
+printf("A população digitada foi: %d\n\n", População2);
 
-printf("Digite o area2:\n");
+printf("Digite o área (Km²): ");
 scanf("%f", &area2);
+printf("A área digitada foi: %.2f\n\n", area2);
 
-printf("Digite o pib2:\n");
+printf("Digite o PIB:");
 scanf("%f", &pib2);
+printf("O PIB digitado foi: %.2f\n\n", pib2);
 
-printf("Digite o Turismo2:\n");
+printf("Digite o número de pontos turísticos:");
 scanf("%d", &Turismo2);
+printf("O número de pontos turísticos digitado foi: %d\n\n", Turismo2);
 
-printf("estado2:, %s\n", estado2);
-printf("CodigoB2:, %s\n", CodigoB2);
-printf("Cidade2:, %s\n", Cidade2);
-printf("População2:, %d\n", População2);
-printf("area2:, %.2f\n", area2);
-printf("pib2:, %.2f\n", pib2);
-printf("Turismo2:, %d\n", Turismo2);
-
-
-
-
-
+printf("---comparação entre as cartas---\n");
 
 return 0;
+
+
 
 
 
