@@ -45,7 +45,7 @@ printf("A população digitada foi: %d\n\n", População1);
 
 printf("Digite o área (Km²): ");
 scanf("%f", &area1);
-printf("A área digitada foi: %.2f\n\n", area1);
+printf("A área digitada foi: %.2fkm²\n\n", area1);
 
 printf("Digite o pib:\n");
 scanf("%f", &pib1);
@@ -77,7 +77,7 @@ printf("A população digitada foi: %d\n\n", População2);
 
 printf("Digite o área (Km²): ");
 scanf("%f", &area2);
-printf("A área digitada foi: %.2f\n\n", area2);
+printf("A área digitada foi: %.2fkm²\n\n", area2);
 
 printf("Digite o PIB:");
 scanf("%f", &pib2);
@@ -87,7 +87,7 @@ printf("Digite o número de pontos turísticos:");
 scanf("%d", &Turismo2);
 printf("O número de pontos turísticos digitado foi: %d\n\n", Turismo2);
 
-printf("---comparação entre as cartas---\n");
+printf("---Comparação entre as cartas---\n");
 
 return 0;
 
