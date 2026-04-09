@@ -60,21 +60,11 @@ printf("Digite o número de pontos turísticos:");
 scanf("%d", &Turismo1);
 printf("O número de pontos turísticos digitado foi: %d\n\n", Turismo1);
 
-// Cálculo da densidade populacional da Carta 1
-Densidade_Populacional1 = (População1 / area1);
-printf("A densidade populacional da cidade é: %.2f hab/km²\n\n", Densidade_Populacional1);
-
-// Cálculo do PIB per capita da Carta 1float população1_float = (float)População1; // Convertendo população para float para evitar divisão inteira
-float Pib_per_capita1;
-Pib_per_capita1 = pib1 / População1; // Calculando o PIB per capita
-printf("O PIB per capita da cidade é: %.2f reais\n\n", Pib_per_capita1);
-
-
 // Entrada e saida da Carta 2
 printf("cadastro da segunda carta:\n");
 
 printf("Digite o estado:");
-scanf(" %[^\n]", estado2); //Lê a linha inteira, incluindo espaços
+scanf("%[^\n]", &estado2); //Lê a linha inteira, incluindo espaços
 printf("O estado digitado foi: %s\n\n", estado2);
 
 printf("Digite o Codigo da carta:");
@@ -126,4 +116,3 @@ return 0;
 
 
 } 
-
