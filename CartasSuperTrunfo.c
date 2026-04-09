@@ -64,9 +64,9 @@ printf("O número de pontos turísticos digitado foi: %d\n\n", Turismo1);
 Densidade_Populacional1 = (População1 / area1);
 printf("A densidade populacional da cidade é: %.2f hab/km²\n\n", Densidade_Populacional1);
 
-// Cálculo do PIB per capita da Carta 1float população1_float = (float)População1; // Convertendo população para float para evitar divisão inteira
-float Pib_per_capita1;
-Pib_per_capita1 = pib1 / População1; // Calculando o PIB per capita
+// Cálculo do PIB per capita da Carta 1
+
+Pib_per_capita1 = ((double)pib1 * 1000000000) / População1; // Calculando o PIB per capita
 printf("O PIB per capita da cidade é: %.2f reais\n\n", Pib_per_capita1);
 
 
@@ -108,7 +108,7 @@ printf("A densidade populacional da cidade é: %.2f hab/km²\n\n", Densidade_Pop
 
 // Cálculo do PIB per capita da Carta 2
 
-Pib_per_capita2 = (pib2 / População2);
+Pib_per_capita2 = ((double)pib2 * 1000000000) / População2; // Calculando o PIB per capita
 printf("O PIB per capita da cidade é: %.2f reais\n\n", Pib_per_capita2);
 
 
