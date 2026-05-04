@@ -2,124 +2,121 @@
 
 int main() {
 
+    // CARTA 1
     char estado1[20];
-    char CodigoA1[20];
-    char Cidade1[20];
-    unsigned long População1;
+    char codigo1[20];
+    char cidade1[50];
+    int populacao1;
     float area1;
     float pib1;
-    int Turismo1;
-    double Densidade_Populacional1;
-    double Pib_per_capita1;
+    int turismo1;
+    float densidade1;
+    float pib_per_capita1;
 
+    // CARTA 2
     char estado2[20];
-    char CodigoB2[20];
-    char Cidade2[50];
-    unsigned long População2;
+    char codigo2[20];
+    char cidade2[50];
+    int populacao2;
     float area2;
     float pib2;
-    int Turismo2;
-    double Densidade_Populacional2;
-    double Pib_per_capita2;
+    int turismo2;
+    float densidade2;
+    float pib_per_capita2;
 
-    printf("cadastre a primeira carta:\n");
+    // =============================
+    // CADASTRO CARTA 1
+    // =============================
+    printf("Cadastro da Carta 1:\n");
 
-    printf("Digite o estado: ");
+    printf("Estado: ");
     scanf(" %[^\n]", estado1);
 
-    printf("Digite o Codigo da carta: ");
-    scanf("%s", CodigoA1);
+    printf("Codigo da carta: ");
+    scanf("%s", codigo1);
 
-    printf("Digite a Cidade: ");
-    scanf(" %[^\n]", Cidade1);
+    printf("Nome da cidade: ");
+    scanf(" %[^\n]", cidade1);
 
-    printf("Digite a População: ");
-    scanf("%lu", &População1);
+    printf("Populacao: ");
+    scanf("%d", &populacao1);
 
-    printf("Digite a área (Km²): ");
+    printf("Area (km2): ");
     scanf("%f", &area1);
 
-    printf("Digite o PIB: ");
+    printf("PIB: ");
     scanf("%f", &pib1);
 
-    printf("Digite o número de pontos turísticos: ");
-    scanf("%d", &Turismo1);
+    printf("Numero de pontos turisticos: ");
+    scanf("%d", &turismo1);
 
-    Densidade_Populacional1 = População1 / area1;
-    printf("A densidade populacional da cidade é: %.2lf hab/km²\n\n", Densidade_Populacional1);
+    // Cálculos Carta 1
+    densidade1 = populacao1 / area1;
+    pib_per_capita1 = pib1 / populacao1;
 
-    Pib_per_capita1 = (pib1 * 1000000000.0) / População1;
-    printf("O PIB per capita da cidade é: %.2lf reais\n\n", Pib_per_capita1);
+    // =============================
+    // CADASTRO CARTA 2
+    // =============================
+    printf("\nCadastro da Carta 2:\n");
 
-    printf("cadastro da segunda carta:\n");
-
-    printf("Digite o estado: ");
+    printf("Estado: ");
     scanf(" %[^\n]", estado2);
 
-    printf("Digite o Codigo da carta: ");
-    scanf("%s", CodigoB2);
+    printf("Codigo da carta: ");
+    scanf("%s", codigo2);
 
-    printf("Digite o nome da Cidade: ");
-    scanf(" %[^\n]", Cidade2);
+    printf("Nome da cidade: ");
+    scanf(" %[^\n]", cidade2);
 
-    printf("Digite a População: ");
-    scanf("%lu", &População2);
+    printf("Populacao: ");
+    scanf("%d", &populacao2);
 
-    printf("Digite a área (Km²): ");
+    printf("Area (km2): ");
     scanf("%f", &area2);
 
-    printf("Digite o PIB: ");
+    printf("PIB: ");
     scanf("%f", &pib2);
 
-    printf("Digite o número de pontos turísticos: ");
-    scanf("%d", &Turismo2);
+    printf("Numero de pontos turisticos: ");
+    scanf("%d", &turismo2);
 
-    Densidade_Populacional2 = População2 / area2;
-    printf("A densidade populacional da cidade é: %.2lf hab/km²\n\n", Densidade_Populacional2);
+    // Cálculos Carta 2
+    densidade2 = populacao2 / area2;
+    pib_per_capita2 = pib2 / populacao2;
 
-    Pib_per_capita2 = (pib2 * 1000000000.0) / População2;
-    printf("O PIB per capita da cidade é: %.2lf reais\n\n", Pib_per_capita2);
+    // =============================
+    // EXIBIR DADOS CALCULADOS
+    // =============================
+    printf("\nDensidade Populacional Carta 1: %.2f\n", densidade1);
+    printf("PIB per capita Carta 1: %.2f\n", pib_per_capita1);
 
-    // -------- SUPER PODER --------
-float SuperPoder1, SuperPoder2;
+    printf("Densidade Populacional Carta 2: %.2f\n", densidade2);
+    printf("PIB per capita Carta 2: %.2f\n", pib_per_capita2);
 
-float inverso1 = (Densidade_Populacional1 != 0) ? (1.0 / Densidade_Populacional1) : 0;
-float inverso2 = (Densidade_Populacional2 != 0) ? (1.0 / Densidade_Populacional2) : 0;
+    // ==================================================
+    // ATRIBUTO ESCOLHIDO PARA COMPARAÇÃO:
+    // POPULAÇÃO
+    // (pode trocar para area, pib, densidade ou pib_per_capita)
+    // ==================================================
 
-SuperPoder1 = População1 + area1 + pib1 + Turismo1 + Pib_per_capita1 + inverso1;
-SuperPoder2 = População2 + area2 + pib2 + Turismo2 + Pib_per_capita2 + inverso2;
+    printf("\nComparacao de cartas (Atributo: Populacao):\n\n");
 
+    printf("Carta 1 - %s (%s): %d\n",
+           cidade1, estado1, populacao1);
 
-// -------- COMPARAÇÃO --------
-printf("Comparação de Cartas:\n\n");
+    printf("Carta 2 - %s (%s): %d\n\n",
+           cidade2, estado2, populacao2);
 
-printf("População: Carta %d venceu (%d)\n\n",
-       (População1 > População2) ? 1 : 2,
-       População1 > População2);
-
-printf("Área: Carta %d venceu (%d)\n\n",
-       (area1 > area2) ? 1 : 2,
-       area1 > area2);
-
-printf("PIB: Carta %d venceu (%d)\n\n",
-       (pib1 > pib2) ? 1 : 2,
-       pib1 > pib2);
-
-printf("Pontos Turísticos: Carta %d venceu (%d)\n\n",
-       (Turismo1 > Turismo2) ? 1 : 2,
-       Turismo1 > Turismo2);
-
-printf("Densidade Populacional: Carta %d venceu (%d)\n\n",
-       (Densidade_Populacional1 < Densidade_Populacional2) ? 1 : 2,
-       Densidade_Populacional1 < Densidade_Populacional2);
-
-printf("PIB per Capita: Carta %d venceu (%d)\n\n",
-       (Pib_per_capita1 > Pib_per_capita2) ? 1 : 2,
-       Pib_per_capita1 > Pib_per_capita2);
-
-printf("Super Poder: Carta %d venceu (%d)\n\n",
-       (SuperPoder1 > SuperPoder2) ? 1 : 2,
-       SuperPoder1 > SuperPoder2);
+    // Resultado
+    if (populacao1 > populacao2) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    }
+    else if (populacao2 > populacao1) {
+        printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    }
+    else {
+        printf("Resultado: Empate!\n");
+    }
 
     return 0;
 }
